@@ -18,6 +18,10 @@ config/icon="res://icon.svg"
 
 Global="*uid://b5m1lrei28rta"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [editor]
 
 version_control/plugin_name="GitPlugin"
