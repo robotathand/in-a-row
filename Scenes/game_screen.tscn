@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c7t86f3uhe8v4"]
+
+[ext_resource type="Script" uid="uid://c81rshxgbm8kx" path="res://Scripts/horizontal_vertical_container.gd" id="1_h8xao"]
+
+[node name="GameScreen" type="Control" unique_id=1749785338]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HorizontalVerticalContainer" type="BoxContainer" parent="." unique_id=1037742152]
+layout_mode = 0
+offset_right = 1021.0
+offset_bottom = 931.0
+script = ExtResource("1_h8xao")
+
+[connection signal="resized" from="HorizontalVerticalContainer" to="HorizontalVerticalContainer" method="_on_resized"]
