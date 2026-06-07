@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="In a Row"
+run/main_scene="uid://c7t86f3uhe8v4"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -21,12 +22,15 @@ Global="*uid://b5m1lrei28rta"
 [display]
 
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [editor]
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/GDQuest_GDScript_formatter/plugin.cfg")
 
 [physics]
 

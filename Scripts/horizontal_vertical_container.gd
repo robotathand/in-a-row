@@ -1,5 +1,9 @@
 extends BoxContainer
 
+func _ready() -> void:
+	resize()
+
+
 func resize():
 	var screen_size = get_viewport_rect().size
 	if screen_size.x > screen_size.y:
@@ -8,10 +12,6 @@ func resize():
 		vertical = true
 	else:
 		vertical = false
-
-
-func _ready() -> void:
-	resize()
 
 
 func _on_resized() -> void:

@@ -1,17 +1,22 @@
 [gd_scene format=3 uid="uid://c7t86f3uhe8v4"]
 
-[ext_resource type="Script" uid="uid://c81rshxgbm8kx" path="res://Scripts/horizontal_vertical_container.gd" id="1_h8xao"]
+[ext_resource type="PackedScene" uid="uid://b07wjem80d4bt" path="res://Scenes/game_board.tscn" id="2_a68iv"]
 
-[node name="GameScreen" type="Control" unique_id=1749785338]
+[node name="GameScreen" type="Control" unique_id=543413905]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1043620209]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="HorizontalVerticalContainer" type="BoxContainer" parent="." unique_id=1037742152]
-layout_mode = 0
-offset_right = 1021.0
-offset_bottom = 931.0
-script = ExtResource("1_h8xao")
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1461581036]
+handle_input_locally = false
+render_target_update_mode = 4
 
-[connection signal="resized" from="HorizontalVerticalContainer" to="HorizontalVerticalContainer" method="_on_resized"]
+[node name="GameBoard" parent="SubViewportContainer/SubViewport" unique_id=835863598 instance=ExtResource("2_a68iv")]
